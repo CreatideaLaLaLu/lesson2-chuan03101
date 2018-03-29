@@ -114,13 +114,20 @@ namespace Taoyuan.Sa.Fund.Service
 
             if (value != null | value != "") value = NewString.Replace("A", ",").Replace("B", "_").Replace("C", " ");
 
-            // good
+            // bad
             string newStringGood = "ABCDEFG"; //新字串
-            if (!string.IsNullOrEmpty(value))
+            if (!string.IsNullOrEmpty(newStringGood))
             {
-                value = newStringGood.Replace("A", ",").Replace("B", "_").Replace("C", " ");
+                newStringGood = newStringGood.Replace("A", ",").Replace("B", "_").Replace("C", " ");
             }
-            
+
+            // good
+            string newStringGood2 = "ABCDEFG"; //新字串
+            if (!string.IsNullOrEmpty(newStringGood2))
+            {
+                newStringGood2 = new StringBuilder(newStringGood2).Replace("A", ",").Replace("B", "_").Replace("C", " ").ToString();
+            }
+
             #endregion
         }
         
